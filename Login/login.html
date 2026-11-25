@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | PortLabs</title>
+
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src="JS/faro.js" defer></script>
+
+</head>
+
+<body>
+    <main class="principal">
+
+        <section class="portada" aria-label="Presentación de PortLabs">
+            <span class="marca">PortLabs</span>
+
+            <div class="textoPortada">
+                <p class="etiqueta">AVANZA HACIA EL FUTURO</p>
+                <h1>Tu futuro estará en el puerto.</h1>
+                <p>Prepárate a tu ritmo y avanza hacia tu plaza en la Policía Portuaria.</p>
+            </div>
+            <img class="imagenPuerto" src="Sources/puertoAlgeciras.png" alt="Puerto de Algeciras.">
+
+        </section>
+
+        <section class="contenido" aria-labelledby="tituloLogin">
+            <div class="contenidoInterior">
+
+                <header>
+                    <p class="etiqueta">CONTINÚA TU TRAVESÍA</p>
+                    <h2 id="tituloLogin">Iniciar sesión</h2>
+                    <p>Continúa tu preparación con PortLabs.</p>
+                </header>
+
+
+                <form action="login.php" method="POST" id="formularioLogin" class="formularioLogin">
+
+                    <div class="campo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico"
+                            autocomplete="username" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contraseña">Contraseña</label>
+                        <div class="campoContraseña">
+                            <input type="password" id="contraseña" name="contraseña" placeholder="Tu contraseña"
+                                autocomplete="current-password" required>
+
+                            <button type="button" class="botonFaro" id="botonFaro" aria-label="Mostrar contraseña"
+                                aria-pressed="false">
+
+                                <img class="faroApagado" src="Sources/faroApagado.svg" alt="">
+                                <img class="faroEncendido" src="Sources/faroEncendido.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <label class="recordar">
+                        <input type="checkbox" name="recordar" value="1">
+                        Recuérdame en este dispositivo
+                    </label>
+
+                    <button type="submit" class="boton">Entrar</button>
+                </form>
+
+                <div class="zonaGoogle">
+                    <p class="separador">o</p>
+
+                    <a href="google.php" class="boton botonGoogle">
+                        <img src="Sources/logoGoogle.svg" alt="">
+                        Continuar con Google
+                    </a>
+                </div>
+
+                <p class="registro">
+                    ¿Todavía no tienes cuenta?
+                    <a href="registro.html">Regístrate</a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

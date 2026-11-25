@@ -1,0 +1,74 @@
+.portada {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background-color: var(--oscuro);
+    position: relative;
+    isolation: isolate;
+}
+
+.portada::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(9, 43, 64, 0.25), rgba(9, 43, 64, 0.05) 40%, rgba(9, 43, 64, 0.85));
+    z-index: -1;
+}
+
+.imagenPuerto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.marca {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.etiqueta {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.textoPortada {
+    display: grid;
+    gap: 12px;
+}
+
+.textoPortada h1 {
+    max-width: 320px;
+    font-size: 38px;
+    line-height: 1.15;
+}
+
+.textoPortada p {
+    max-width: 300px;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    .portada {
+        min-height: 100px;
+        padding: 24px;
+    }
+
+    .textoPortada {
+        display: none;
+    }
+
+    .marca {
+        margin: auto;
+        padding: 12px 32px;
+        font-size: 48px;
+        border: 5px solid var(--claro);
+        background-color: color-mix(in srgb, var(--oscuro) 70%, transparent);
+    }
+}

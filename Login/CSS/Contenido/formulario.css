@@ -1,0 +1,82 @@
+.formularioLogin {
+    display: grid;
+    gap: 24px;
+}
+
+.campo {
+    display: grid;
+    gap: 8px;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    padding: 16px;
+    font: inherit;
+    color: inherit;
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+.campo input:focus {
+    border-color: var(--azul);
+    outline: 3px solid var(--claro);
+}
+
+.campoContraseña {
+    position: relative;
+}
+
+.campoContraseña input {
+    padding-right: 48px;
+}
+
+.botonFaro {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.botonFaro img {
+    width: 26px;
+    height: 26px;
+}
+
+.botonFaro[aria-pressed="false"] .faroEncendido,
+.botonFaro[aria-pressed="true"] .faroApagado {
+    display: none;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.recordar,
+.recordar input {
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .formularioLogin {
+        gap: 16px;
+    }
+
+    .campo input {
+        padding-block: 12px;
+    }
+}

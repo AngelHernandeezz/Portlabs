@@ -1,0 +1,18 @@
+/* Punto de entrada de todos los estilos de la página. */
+/* Define los colores compartidos antes de usarlos. */
+@import url('variables.css');
+
+/* Aplica el reinicio básico y la estructura de columnas. */
+@import url('principal.css');
+
+/* Da estilo a la foto y al texto de presentación. */
+@import url('portada.css');
+
+/* Da estilo a la zona derecha y sus textos. */
+@import url('Contenido/contenido.css');
+
+/* Da estilo a los campos y al control del faro. */
+@import url('Contenido/formulario.css');
+
+/* Da estilo a las acciones de Entrar y Google. */
+@import url('Contenido/botones.css');
